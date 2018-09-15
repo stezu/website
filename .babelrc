@@ -1,0 +1,55 @@
+{
+  "presets": [
+    "react",
+    "es2015",
+    "stage-0"
+  ],
+  "plugins": [
+    "transform-runtime",
+    "polished",
+    [
+      "module-resolver",
+      {
+        "root": [
+          "./"
+        ],
+        "alias": {
+          "@": "./src"
+        }
+      }
+    ]
+  ],
+  "env": {
+    "production": {
+      "plugins": [
+        [
+          "emotion",
+          {
+            "hoist": true
+          }
+        ]
+      ]
+    },
+    "development": {
+      "plugins": [
+        [
+          "emotion",
+          {
+            "sourceMap": true,
+            "autoLabel": true
+          }
+        ]
+      ]
+    },
+    "test": {
+      "plugins": [
+        [
+          "emotion",
+          {
+            "hoist": true
+          }
+        ]
+      ]
+    }
+  }
+}
