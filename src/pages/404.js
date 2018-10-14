@@ -4,21 +4,17 @@ import styled from 'react-emotion';
 
 import { Gradient, Link } from '@/components';
 import { SITE_TITLE } from '@/constants';
-import { breakpoint, spacer, typography } from '@/styles';
+import { breakpoint, cssLock, spacer, typography } from '@/styles';
 
 const Wrapper = styled.div`
+  ${cssLock('padding', spacer(3), spacer(4))};
+
   display: flex;
   flex-direction: column;
   height: 100%;
   justify-content: center;
   margin: 0 auto;
   max-width: 1100px;
-  padding: ${spacer(3)};
-  transition: padding 150ms;
-
-  ${breakpoint('medium')} {
-    padding: ${spacer(4)};
-  }
 `;
 
 // TODO: add styles

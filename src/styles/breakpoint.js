@@ -1,6 +1,8 @@
+import { MEDIUM_SCREEN, LARGE_SCREEN } from '@/constants';
+
 const BREAKPOINTS = {
-  medium: '@media (min-width: 450px)',
-  large: '@media (min-width: 900px)'
+  medium: `@media (min-width: ${MEDIUM_SCREEN})`,
+  large: `@media (min-width: ${LARGE_SCREEN})`
 };
 
 /**

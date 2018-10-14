@@ -6,7 +6,6 @@
   ],
   "plugins": [
     "transform-runtime",
-    "polished",
     [
       "module-resolver",
       {

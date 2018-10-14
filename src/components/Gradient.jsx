@@ -1,22 +1,19 @@
 import React from 'react';
 import styled from 'react-emotion';
+import { fluidRange } from 'polished';
 
-import { breakpoint, color, spacer } from '@/styles';
+import { breakpoint, color, cssLock, spacer } from '@/styles';
 
 const GRADIENT = `linear-gradient(${color('salmon')}, ${color('jellybean')})`;
 const SOLID = color('gunmetal');
 
 const Wrapper = styled.main`
+  ${cssLock('padding', spacer(3), spacer(4))};
+
   background: ${({ location }) => (location === 'foreground' ? SOLID : GRADIENT)};
   color: ${color('seashell')};
   display: flex;
   min-height: 100%;
-  padding: ${spacer(3)};
-  transition: padding 150ms;
-
-  ${breakpoint('medium')} {
-    padding: ${spacer(4)};
-  }
 `;
 
 const Content = styled.div`

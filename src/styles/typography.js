@@ -1,12 +1,14 @@
+// TODO: https://ether.thescenery.co/typography/
 // TODO: https://medium.com/@ethersystem/typography-in-design-systems-d61bf5d8a333
-import { modularScale, stripUnit } from 'polished';
 
-import { breakpoint } from '@/styles';
+import { modularScale } from 'polished';
 
-const DESKTOP_STARTING_SIZE = 1.6;
-const MOBILE_STARTING_SIZE = 1.7;
+import cssLock from './cssLock';
+
+const DESKTOP_STARTING_SIZE = 16;
+const MOBILE_STARTING_SIZE = 14;
 const NUMBER_OF_TYPE_SIZES = 5;
-const FONT_SIZE_UNIT = 'ex';
+const FONT_SIZE_UNIT = 'px';
 
 // Get the font size for the given heading level based on the max number of font sizes
 function getFontSize(level, isMobile) {
@@ -20,29 +22,13 @@ function getFontSize(level, isMobile) {
   return modularScale(NUMBER_OF_TYPE_SIZES - level, base, ratio).replace('em', FONT_SIZE_UNIT);
 }
 
-// Get CSS-Lock compatible font styles.
-// See: https://css-tricks.com/between-the-lines/
+// Get CSS-Lock compatible font styles so they progressively scale
+// from the "mobile" value to the "desktop" value.
 function getFluidFontSizeStyles(level) {
   const startSize = getFontSize(level, true);
   const endSize = getFontSize(level, false);
-  // TODO: fix slope so it scales properly
-  // TODO: https://ether.thescenery.co/typography/
-  // TODO: use https://github.com/styled-components/polished/blob/version-2/src/helpers/modularScale.js
-  // TODO: use https://github.com/styled-components/polished/blob/version-2/src/mixins/fluidRange.js
-  // TODO: use https://github.com/styled-components/polished/blob/version-2/src/mixins/between.js
-  // TODO: replace 450 and 900 with media query constants used by the breakpoint module
-  // const slope = (stripUnit(endSize) - stripUnit(startSize)) / (900 - 450);
-  // const base = stripUnit(startSize) - slope * 450;
 
-  return {
-    fontSize: startSize,
-    // [breakpoint('medium')]: {
-    //   fontSize: `calc(${base}${FONT_SIZE_UNIT} + ${100 * slope}vw)`
-    // },
-    [breakpoint('large')]: {
-      fontSize: endSize
-    }
-  };
+  return cssLock('fontSize', startSize, endSize);
 }
 
 const TYPOGRAPHY = {

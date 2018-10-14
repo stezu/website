@@ -26,11 +26,12 @@ const SubTitle = styled.h2`
   background: ${color('white')};
   color: ${color('gunmetal')};
   margin: ${spacer(3)} 0 0;
+  min-width: 100%;
   padding: ${spacer(3)} ${spacer(4)};
-  width: 100%;
+  transition: min-width 250ms;
 
   ${breakpoint('medium')} {
-    width: auto;
+    min-width: 0;
   }
 `;
 
