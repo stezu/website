@@ -1,7 +1,7 @@
 import { injectGlobal } from 'react-emotion';
 import { normalize } from 'polished';
 
-import { typography } from '@/styles';
+import { color, typography } from '@/styles';
 
 export default function globalStyles() {
   // Normalize.css
@@ -29,6 +29,7 @@ export default function globalStyles() {
     #___gatsby {
       ${typography('Body 1')};
 
+      background: ${color('gunmetal')};
       height: 100%;
     }
   `;

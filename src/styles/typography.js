@@ -19,7 +19,10 @@ function getFontSize(level, isMobile) {
   const base = isMobile ? MOBILE_STARTING_SIZE : DESKTOP_STARTING_SIZE;
   const ratio = isMobile ? 'minorThird' : 'majorThird';
 
-  return modularScale(NUMBER_OF_TYPE_SIZES - level, base, ratio).replace('em', FONT_SIZE_UNIT);
+  return modularScale(NUMBER_OF_TYPE_SIZES - level, base, ratio).replace(
+    'em',
+    FONT_SIZE_UNIT
+  );
 }
 
 // Get CSS-Lock compatible font styles so they progressively scale

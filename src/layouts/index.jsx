@@ -1,15 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import { SITE_SUBTITLE, SITE_TITLE } from '@/constants';
+import { Transition } from '@/components';
 import { globalStyles } from '@/styles';
 
 // Render all global styles
 globalStyles();
 
-const Layout = ({ children }) => (
-  <Fragment>
+const Layout = ({ children, location }) => (
+  <>
     <Helmet>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link
@@ -20,12 +21,12 @@ const Layout = ({ children }) => (
         {SITE_TITLE} | {SITE_SUBTITLE}
       </title>
     </Helmet>
-    {children()}
-  </Fragment>
+    <Transition location={location}>{children}</Transition>
+  </>
 );
 
 Layout.propTypes = {
-  children: PropTypes.func,
+  children: PropTypes.node
 };
 
 export default Layout;

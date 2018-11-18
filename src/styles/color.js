@@ -1,4 +1,5 @@
 const COLORS = {
+  fadedBlack: '#71777b',
   gunmetal: '#26323C',
   jellybean: '#D1614D',
   roastCoffee: '#704544',

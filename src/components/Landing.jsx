@@ -11,6 +11,11 @@ const Header = styled.header`
   min-height: 100%;
   text-align: center;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus-within {
+    /*  */
+  }
 `;
 
 const Title = styled.h1`

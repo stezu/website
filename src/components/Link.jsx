@@ -2,7 +2,6 @@ import styled from 'react-emotion';
 import { darken } from 'polished';
 import GatsbyLink from 'gatsby-link';
 
-
 import { color } from '@/styles';
 
 // TODO: add dotted underline
