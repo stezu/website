@@ -5,7 +5,7 @@ import { Gradient, Landing } from '@/components';
 import { SITE_TITLE, SITE_SUBTITLE } from '@/constants';
 
 const IndexPage = () => (
-  <Gradient theme="DARK">
+  <Gradient theme="dark">
     <Helmet>
       <title>
         {SITE_TITLE} | {SITE_SUBTITLE}

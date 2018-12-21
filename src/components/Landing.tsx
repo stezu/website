@@ -1,7 +1,12 @@
 import React from 'react';
-import styled from 'react-emotion';
+import styled from '@emotion/styled';
 
 import { breakpoint, color, spacer, typography } from '@/styles';
+
+interface LandingProps {
+  title: string;
+  subTitle: string;
+}
 
 const Header = styled.header`
   align-items: center;
@@ -30,9 +35,9 @@ const SubTitle = styled.h2`
 
   background: ${color('white')};
   color: ${color('gunmetal')};
-  margin: ${spacer(3)} 0 0;
+  margin: ${spacer('small')} 0 0;
   min-width: 100%;
-  padding: ${spacer(3)} ${spacer(4)};
+  padding: ${spacer('small')} ${spacer('medium')};
   transition: min-width 250ms;
 
   ${breakpoint('medium')} {
@@ -41,11 +46,11 @@ const SubTitle = styled.h2`
 `;
 
 // TODO: add links/icons for github, linkedin, and resume
-export default function Landing({ title, subTitle }) {
-  return (
-    <Header>
-      <Title>{title}</Title>
-      <SubTitle>{subTitle}</SubTitle>
-    </Header>
-  );
-}
+const Landing: React.SFC<LandingProps> = ({ title, subTitle }) => (
+  <Header>
+    <Title>{title}</Title>
+    <SubTitle>{subTitle}</SubTitle>
+  </Header>
+);
+
+export default Landing;

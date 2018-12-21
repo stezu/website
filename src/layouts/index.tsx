@@ -1,16 +1,17 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Helmet from 'react-helmet';
 
 import { SITE_SUBTITLE, SITE_TITLE } from '@/constants';
-import { Transition } from '@/components';
-import { globalStyles, color } from '@/styles';
+import { GlobalStyles, Transition } from '@/components';
+import { color } from '@/styles';
 
-// Render all global styles
-globalStyles();
+interface LayoutProps {
+  children: React.ReactNode;
+  location: Location;
+}
 
-const Layout = ({ children, location }) => (
-  <>
+const Layout: React.SFC<LayoutProps> = ({ children, location }) => (
+  <GlobalStyles>
     <Helmet>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content={color('gunmetal')} />
@@ -23,11 +24,7 @@ const Layout = ({ children, location }) => (
       </title>
     </Helmet>
     <Transition location={location}>{children}</Transition>
-  </>
+  </GlobalStyles>
 );
-
-Layout.propTypes = {
-  children: PropTypes.node
-};
 
 export default Layout;

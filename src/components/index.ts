@@ -1,3 +1,4 @@
+export { default as GlobalStyles } from './GlobalStyles';
 export { default as Gradient } from './Gradient';
 export { default as Transition } from './Transition';
 export { default as Landing } from './Landing';

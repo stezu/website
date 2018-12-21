@@ -1,15 +1,11 @@
 {
-  "presets": [
-    "gatsby"
-  ],
+  "presets": ["@babel/preset-typescript", "gatsby"],
   "plugins": [
     "@babel/plugin-transform-runtime",
     [
       "module-resolver",
       {
-        "root": [
-          "./"
-        ],
+        "root": ["./"],
         "alias": {
           "@": "./src"
         }
