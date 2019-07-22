@@ -56,7 +56,7 @@
     "gatsby-transformer-remark": "^2.1.20",
     "prettier": "^1.14.3",
     "ts-node": "^8.3.0",
-    "tslint": "^5.11.0",
+    "tslint": "^5.18.0",
     "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^4.0.0",
     "typescript": "^3.5.3"
