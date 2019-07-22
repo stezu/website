@@ -53,7 +53,7 @@
     "gatsby-plugin-react-helmet": "^3.0.4",
     "gatsby-plugin-typescript": "^2.0.3",
     "gatsby-source-filesystem": "^2.0.12",
-    "gatsby-transformer-remark": "^2.1.17",
+    "gatsby-transformer-remark": "^2.1.20",
     "prettier": "^1.14.3",
     "ts-node": "^8.3.0",
     "tslint": "^5.11.0",
