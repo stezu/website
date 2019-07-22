@@ -55,7 +55,7 @@
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-remark": "^2.1.17",
     "prettier": "^1.14.3",
-    "ts-node": "^7.0.1",
+    "ts-node": "^8.3.0",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.17.0",
     "tslint-react": "^4.0.0",
