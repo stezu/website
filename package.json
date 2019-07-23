@@ -24,7 +24,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.5.5",
-    "@emotion/core": "^10.0.5",
+    "@emotion/core": "^10.0.14",
     "@emotion/styled": "^10.0.12",
     "@mdx-js/mdx": "^0.16.6",
     "@mdx-js/tag": "^0.16.6",
