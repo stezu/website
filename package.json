@@ -30,7 +30,7 @@
     "@mdx-js/tag": "^0.20.3",
     "emotion": "^10.0.14",
     "emotion-server": "^10.0.14",
-    "gatsby-link": "^2.2.2",
+    "gatsby-link": "^2.2.3",
     "gatsby-mdx": "^0.2.0",
     "polished": "^3.4.1",
     "react": "^16.8.6",
