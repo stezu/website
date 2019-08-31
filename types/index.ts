@@ -10,14 +10,12 @@ interface PageInput {
 interface ActionCreators {
   createPage: (page: PageInput) => void;
   deletePage: (page: PageInput) => void;
-  createRedirect: (
-    opts: {
-      fromPath: string;
-      isPermanent?: boolean;
-      redirectInBrowser?: boolean;
-      toPath: string;
-    }
-  ) => void;
+  createRedirect: (opts: {
+    fromPath: string;
+    isPermanent?: boolean;
+    redirectInBrowser?: boolean;
+    toPath: string;
+  }) => void;
 }
 
 interface GraphQLResult {
@@ -25,9 +23,7 @@ interface GraphQLResult {
   data: any;
 }
 
-export type GatsbyCreatePages = (
-  fns: {
-    graphql: (query: string) => PromiseLike<GraphQLResult>;
-    actions: ActionCreators;
-  }
-) => PromiseLike<any>;
+export type GatsbyCreatePages = (fns: {
+  graphql: (query: string) => PromiseLike<GraphQLResult>;
+  actions: ActionCreators;
+}) => PromiseLike<any>;
