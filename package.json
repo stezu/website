@@ -46,7 +46,7 @@
     "@types/react-helmet": "^5.0.15",
     "@types/react-transition-group": "^4.2.3",
     "babel-plugin-module-resolver": "^4.0.0",
-    "babel-preset-gatsby": "^0.2.27",
+    "babel-preset-gatsby": "^0.3.3",
     "gatsby": "^2.19.9",
     "gatsby-plugin-emotion": "^4.1.21",
     "gatsby-plugin-layout": "^1.1.21",
