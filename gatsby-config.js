@@ -6,31 +6,37 @@ module.exports = {
       resolve: 'gatsby-plugin-typescript',
       options: {
         allExtensions: true,
-        isTSX: true
-      }
+        isTSX: true,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-typescript-checker',
+      options: {
+        reportFiles: ['src/**/*.{ts,tsx}'],
+      },
     },
     {
       resolve: 'gatsby-plugin-layout',
       options: {
-        component: require.resolve('./src/layouts/index.tsx')
-      }
+        component: require.resolve('./src/layouts/index.tsx'),
+      },
     },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/templates/blogTemplate.tsx')
+          default: require.resolve('./src/templates/MarkdownTemplate.tsx'),
         },
-        extensions: ['.mdx', '.md']
-      }
+        extensions: ['.mdx', '.md'],
+      },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'posts',
-        path: `${__dirname}/md`
-      }
+        path: `${__dirname}/md`,
+      },
     },
-    'gatsby-transformer-remark'
-  ]
+    'gatsby-transformer-remark',
+  ],
 };

@@ -2,20 +2,9 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';
 
-import { Gradient } from '@/components';
+import { Gradient, Markdown } from '@/components';
 import { SITE_TITLE } from '@/constants';
 import { color, cssLock, spacer, typography } from '@/styles';
-
-interface TemplateProps {
-  children: React.ReactNode;
-  pageContext: {
-    frontmatter: {
-      path: string;
-      title: string;
-      date: string;
-    };
-  };
-}
 
 const Wrapper = styled.div`
   ${cssLock('padding', spacer('small'), spacer('medium'))};
@@ -37,7 +26,21 @@ const PageMeta = styled.small`
   color: ${color('fadedBlack')};
 `;
 
-const Template: React.SFC<TemplateProps> = ({ children, pageContext }) => (
+export interface MarkdownTemplateProps {
+  children: React.ReactNode;
+  pageContext: {
+    frontmatter: {
+      path: string;
+      title: string;
+      date: string;
+    };
+  };
+}
+
+const MarkdownTemplate: React.SFC<MarkdownTemplateProps> = ({
+  children,
+  pageContext,
+}) => (
   <>
     <Helmet>
       <title>
@@ -49,10 +52,10 @@ const Template: React.SFC<TemplateProps> = ({ children, pageContext }) => (
       <Wrapper>
         <PageTitle>{pageContext.frontmatter.title}</PageTitle>
         <PageMeta>{pageContext.frontmatter.date}</PageMeta>
-        {children}
+        <Markdown>{children}</Markdown>
       </Wrapper>
     </Gradient>
   </>
 );
 
-export default Template;
+export default MarkdownTemplate;

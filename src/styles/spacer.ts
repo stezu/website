@@ -1,13 +1,4 @@
-export interface Spacer {
-  tiny: string;
-  xSmall: string;
-  small: string;
-  medium: string;
-  large: string;
-  xLarge: string;
-}
-
-const AvailableSpacers: Spacer = {
+const AvailableSpacers = {
   tiny: '2px',
   xSmall: '4px',
   small: '8px',
@@ -16,9 +7,17 @@ const AvailableSpacers: Spacer = {
   xLarge: '64px',
 };
 
+export type Spacer =
+  | 'tiny'
+  | 'xSmall'
+  | 'small'
+  | 'medium'
+  | 'large'
+  | 'xLarge';
+
 /**
  * Returns the spacer matching the given name.
  */
-export default function spacer(spacerName: keyof Spacer): string {
+export default function spacer(spacerName: Spacer): string {
   return AvailableSpacers[spacerName];
 }

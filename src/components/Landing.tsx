@@ -40,7 +40,7 @@ const SubTitle = styled.h2`
   padding: ${spacer('small')} ${spacer('medium')};
   transition: min-width 250ms;
 
-  ${breakpoint('medium')} {
+  ${breakpoint('large')} {
     min-width: 0;
   }
 `;

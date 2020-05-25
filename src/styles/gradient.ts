@@ -12,33 +12,29 @@ interface GradientValues {
   text: string;
 }
 
-export interface Gradient {
-  dark: GradientValues;
-  display: GradientValues;
-  light: GradientValues;
-}
-
-const AvailableGradients: Gradient = {
+const AvailableGradients = {
   dark: {
     background: GRADIENT,
     foreground: SOLID_DARK,
-    text: LIGHT_TEXT
+    text: LIGHT_TEXT,
   },
   display: {
     background: SOLID_DARK,
     foreground: GRADIENT,
-    text: LIGHT_TEXT
+    text: LIGHT_TEXT,
   },
   light: {
     background: GRADIENT,
     foreground: SOLID_LIGHT,
-    text: DARK_TEXT
-  }
+    text: DARK_TEXT,
+  },
 };
+
+export type Gradient = 'dark' | 'display' | 'light';
 
 /**
  * Returns the gradient matching the given name.
  */
-export default function gradient(gradientName: keyof Gradient): GradientValues {
+export default function gradient(gradientName: Gradient): GradientValues {
   return AvailableGradients[gradientName];
 }

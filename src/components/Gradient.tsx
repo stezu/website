@@ -5,36 +5,36 @@ import { cssLock, gradient, spacer } from '@/styles';
 import { Gradient } from '@/styles/gradient';
 
 interface StyledComponentProps {
-  theme: keyof Gradient;
+  gradientName: Gradient;
 }
 
 interface GradientProps {
   children: React.ReactNode;
   className?: string;
-  theme: keyof Gradient;
+  theme: Gradient;
 }
 
 const Wrapper = styled.main<StyledComponentProps>`
   ${cssLock('padding', spacer('small'), spacer('medium'))};
 
-  background: ${({ theme }) => gradient(theme).background};
-  color: ${({ theme }) => gradient(theme).text};
+  background: ${({ gradientName }) => gradient(gradientName).background};
+  color: ${({ gradientName }) => gradient(gradientName).text};
   display: flex;
   min-height: 100%;
 `;
 
 const Content = styled.div<StyledComponentProps>`
-  background: ${({ theme }) => gradient(theme).foreground};
+  background: ${({ gradientName }) => gradient(gradientName).foreground};
   flex: 1;
 `;
 
 const GradientComponent: React.SFC<GradientProps> = ({
   children,
   className,
-  theme
+  theme,
 }) => (
-  <Wrapper theme={theme}>
-    <Content className={className} theme={theme}>
+  <Wrapper gradientName={theme}>
+    <Content className={className} gradientName={theme}>
       {children}
     </Content>
   </Wrapper>
