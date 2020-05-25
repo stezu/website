@@ -13,12 +13,12 @@ const AvailableSpacers: Spacer = {
   small: '8px',
   medium: '16px',
   large: '32px',
-  xLarge: '64px'
+  xLarge: '64px',
 };
 
 /**
  * Returns the spacer matching the given name.
  */
-export default function spacer(spacerName: keyof Spacer) {
+export default function spacer(spacerName: keyof Spacer): string {
   return AvailableSpacers[spacerName];
 }

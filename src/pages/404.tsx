@@ -28,7 +28,7 @@ const PageContent = styled.p`
 
 const PAGE_SUBTITLE = 'Page Not Found';
 
-const PageNotFound = () => (
+const PageNotFound: React.SFC = () => (
   <>
     <Helmet>
       <title>
@@ -39,7 +39,7 @@ const PageNotFound = () => (
       <Wrapper>
         <PageTitle>404 | {PAGE_SUBTITLE}</PageTitle>
         <PageContent>
-          The page you were looking for doesn't exist,{' '}
+          The page you were looking for doesn&apos;t exist,{' '}
           <Link to="/">go back</Link>
         </PageContent>
       </Wrapper>

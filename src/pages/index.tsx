@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import { Gradient, Landing } from '@/components';
 import { SITE_TITLE, SITE_SUBTITLE } from '@/constants';
 
-const IndexPage = () => (
+const IndexPage: React.SFC = () => (
   <Gradient theme="dark">
     <Helmet>
       <title>

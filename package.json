@@ -18,7 +18,8 @@
     "ci": "npm run clean && npm run build",
     "clean": "rm -rf public",
     "format": "prettier --ignore-path .gitignore --write '**/*.{js,ts,jsx,tsx}'",
-    "lint": "tslint --project .",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint ./src --fix",
     "start": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -45,8 +46,14 @@
     "@types/react-dom": "^16.9.8",
     "@types/react-helmet": "^6.0.0",
     "@types/react-transition-group": "^4.4.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.1",
+    "@typescript-eslint/parser": "^3.0.1",
     "babel-plugin-module-resolver": "^4.0.0",
     "babel-preset-gatsby": "^0.4.7",
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.20.0",
     "gatsby": "^2.22.10",
     "gatsby-plugin-emotion": "^4.3.2",
     "gatsby-plugin-layout": "^1.3.2",
@@ -57,9 +64,6 @@
     "gatsby-transformer-remark": "^2.8.13",
     "prettier": "^2.0.5",
     "ts-node": "^8.10.1",
-    "tslint": "^6.1.2",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^5.0.0",
     "typescript": "^3.9.3"
   }
 }

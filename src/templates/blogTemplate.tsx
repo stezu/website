@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from '@emotion/styled';
 
-import { Gradient, Markdown } from '@/components';
+import { Gradient } from '@/components';
 import { SITE_TITLE } from '@/constants';
 import { color, cssLock, spacer, typography } from '@/styles';
 
@@ -37,11 +37,7 @@ const PageMeta = styled.small`
   color: ${color('fadedBlack')};
 `;
 
-const Template: React.SFC<TemplateProps> = ({
-  children,
-  pageContext,
-  ...restProps
-}) => (
+const Template: React.SFC<TemplateProps> = ({ children, pageContext }) => (
   <>
     <Helmet>
       <title>

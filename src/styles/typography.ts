@@ -39,33 +39,33 @@ const AvailableTypography: Typography = {
   'Title 1': {
     fontFamily: '"Roboto", sans-serif',
     fontWeight: 900,
-    ...getFluidFontSizeStyles(4)
+    ...getFluidFontSizeStyles(4),
   },
   'Title 2': {
     fontFamily: '"Roboto", sans-serif',
     fontWeight: 900,
-    ...getFluidFontSizeStyles(3)
+    ...getFluidFontSizeStyles(3),
   },
   'Title 3': {
     fontFamily: '"Roboto", sans-serif',
     fontWeight: 900,
-    ...getFluidFontSizeStyles(2)
+    ...getFluidFontSizeStyles(2),
   },
   'Body 1': {
     fontFamily: '"Roboto", sans-serif',
     fontWeight: 400,
-    ...getFluidFontSizeStyles(1)
+    ...getFluidFontSizeStyles(1),
   },
   'Body 2': {
     fontFamily: '"Roboto", sans-serif',
     fontWeight: 400,
-    ...getFluidFontSizeStyles(0)
-  }
+    ...getFluidFontSizeStyles(0),
+  },
 };
 
 /**
  * Return the typography styles matching the given name.
  */
-export default function typography(typeName: keyof Typography) {
+export default function typography(typeName: keyof Typography): CSSObject {
   return AvailableTypography[typeName];
 }
