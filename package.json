@@ -17,7 +17,6 @@
     "build": "gatsby build",
     "ci": "npm run clean && npm run build",
     "clean": "rm -rf public",
-    "format": "prettier --ignore-path .gitignore --write '**/*.{js,ts,jsx,tsx}'",
     "lint": "eslint ./src",
     "lint:fix": "eslint ./src --fix",
     "start": "gatsby develop",
