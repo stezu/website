@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import MDXRenderer from 'gatsby-mdx/mdx-renderer';
-import { MDXProvider } from '@mdx-js/tag';
+import { MDXProvider } from '@mdx-js/react';
 
 import { typography } from '@/styles';
 
@@ -17,14 +16,14 @@ const P = styled.p`
   ${typography('Body 1')};
 `;
 
-const Markdown: React.SFC<MarkdownProps> = ({ children, ...restProps }) => (
+const Markdown: React.SFC<MarkdownProps> = ({ children }) => (
   <MDXProvider
     components={{
       h1: H1,
       p: P
     }}
   >
-    <MDXRenderer {...restProps}>{children}</MDXRenderer>
+    {children}
   </MDXProvider>
 );
 

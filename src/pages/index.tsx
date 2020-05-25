@@ -1,5 +1,5 @@
 import React from 'react';
-import Helmet from 'react-helmet';
+import { Helmet } from 'react-helmet';
 
 import { Gradient, Landing } from '@/components';
 import { SITE_TITLE, SITE_SUBTITLE } from '@/constants';

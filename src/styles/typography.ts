@@ -35,7 +35,7 @@ export interface Typography {
   'Body 2': CSSObject;
 }
 
-const AvailablyTypography: Typography = {
+const AvailableTypography: Typography = {
   'Title 1': {
     fontFamily: '"Roboto", sans-serif',
     fontWeight: 900,
@@ -67,5 +67,5 @@ const AvailablyTypography: Typography = {
  * Return the typography styles matching the given name.
  */
 export default function typography(typeName: keyof Typography) {
-  return AvailablyTypography[typeName];
+  return AvailableTypography[typeName];
 }

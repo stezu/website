@@ -2,7 +2,7 @@ import { GatsbyCreatePages } from '../types';
 
 const createPages: GatsbyCreatePages = async ({
   graphql,
-  actions: { createPage }
+  actions: { createPage },
 }) => {
   const result = await graphql(`
     {
@@ -10,9 +10,7 @@ const createPages: GatsbyCreatePages = async ({
         edges {
           node {
             id
-            code {
-              scope
-            }
+            body
             fileAbsolutePath
             frontmatter {
               path
@@ -33,8 +31,8 @@ const createPages: GatsbyCreatePages = async ({
       path: node.frontmatter.path,
       component: node.fileAbsolutePath,
       context: {
-        id: node.id
-      }
+        id: node.id,
+      },
     });
   });
 
