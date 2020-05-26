@@ -22,7 +22,7 @@ const Cube = styled.div`
 `;
 
 const Container = styled.div<StyledContainerProps>`
-  perspective: 1600px;
+  perspective: 1800px;
 
   &:hover ${Cube}, &:focus-within ${Cube} {
     transform: ${({ rotationDirection }) =>
