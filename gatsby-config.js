@@ -3,6 +3,18 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: 'Stephen Zuniga',
+        short_name: 'Stephen Zuniga',
+        start_url: '/',
+        background_color: '#26323C',
+        theme_color: '#D1614D',
+        display: 'standalone',
+        icon: 'src/assets/z-block.svg',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-html-attributes',
       options: {
         lang: 'en',
