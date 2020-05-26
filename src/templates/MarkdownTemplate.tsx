@@ -37,7 +37,7 @@ export interface MarkdownTemplateProps {
   };
 }
 
-const MarkdownTemplate: React.SFC<MarkdownTemplateProps> = ({
+const MarkdownTemplate: React.FunctionComponent<MarkdownTemplateProps> = ({
   children,
   pageContext,
 }) => (

@@ -31,7 +31,9 @@ const globalStyles = css`
   }
 `;
 
-const GlobalStyles: React.SFC<GlobalStylesProps> = ({ children }) => (
+const GlobalStyles: React.FunctionComponent<GlobalStylesProps> = ({
+  children,
+}) => (
   <React.Fragment>
     <Global styles={globalStyles} />
     {children}

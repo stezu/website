@@ -3,6 +3,23 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-module-resolver',
+      options: {
+        root: './src',
+        aliases: {
+          '@': './',
+        },
+      },
+    },
+    {
       resolve: 'gatsby-plugin-typescript',
       options: {
         allExtensions: true,

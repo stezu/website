@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   TransitionGroup,
-  Transition as ReactTransition
+  Transition as ReactTransition,
 } from 'react-transition-group';
 import { TransitionStatus } from 'react-transition-group/Transition';
 
@@ -14,7 +14,7 @@ const TIMEOUT = 250;
 const DEFAULT_STYLE = {
   height: '100vh',
   opacity: 0,
-  transition: `opacity ${TIMEOUT}ms ease-in-out`
+  transition: `opacity ${TIMEOUT}ms ease-in-out`,
 };
 
 const getTransitionStyles = (state: TransitionStatus): React.CSSProperties => {
@@ -29,10 +29,13 @@ const getTransitionStyles = (state: TransitionStatus): React.CSSProperties => {
   return { ...DEFAULT_STYLE };
 };
 
-const Transition: React.SFC<TransitionProps> = ({ children, location }) => (
+const Transition: React.FunctionComponent<TransitionProps> = ({
+  children,
+  location,
+}) => (
   <TransitionGroup>
     <ReactTransition key={location.pathname} timeout={TIMEOUT}>
-      {state => <div style={getTransitionStyles(state)}>{children}</div>}
+      {(state) => <div style={getTransitionStyles(state)}>{children}</div>}
     </ReactTransition>
   </TransitionGroup>
 );

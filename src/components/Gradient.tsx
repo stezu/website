@@ -28,7 +28,7 @@ const Content = styled.div<StyledComponentProps>`
   flex: 1;
 `;
 
-const GradientComponent: React.SFC<GradientProps> = ({
+const GradientComponent: React.FunctionComponent<GradientProps> = ({
   children,
   className,
   theme,

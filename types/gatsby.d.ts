@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 interface PageInput {
   path: string;
   component: string;

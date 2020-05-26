@@ -28,7 +28,7 @@ const PageContent = styled.p`
 
 const PAGE_SUBTITLE = 'Page Not Found';
 
-const PageNotFound: React.SFC = () => (
+const PageNotFound: React.FunctionComponent = () => (
   <>
     <Helmet>
       <title>

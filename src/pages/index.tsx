@@ -1,10 +1,12 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 
-import { Gradient, Landing } from '@/components';
+import { Gradient } from '@/components';
 import { SITE_TITLE, SITE_SUBTITLE } from '@/constants';
 
-const IndexPage: React.SFC = () => (
+import { Landing } from '@/views';
+
+const IndexPage: React.FunctionComponent = () => (
   <Gradient theme="dark">
     <Helmet>
       <title>

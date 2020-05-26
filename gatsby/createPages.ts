@@ -1,4 +1,4 @@
-import { GatsbyCreatePages } from '../types';
+import { GatsbyCreatePages } from '../types/gatsby';
 
 const createPages: GatsbyCreatePages = async ({
   graphql,

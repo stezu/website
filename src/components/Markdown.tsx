@@ -52,7 +52,7 @@ const Small = styled.small`
   ${typography('Body 2')};
 `;
 
-const Markdown: React.SFC<MarkdownProps> = ({ children }) => (
+const Markdown: React.FunctionComponent<MarkdownProps> = ({ children }) => (
   <MDXProvider
     components={{
       h1: H1,

@@ -46,7 +46,10 @@ const SubTitle = styled.h2`
 `;
 
 // TODO: add links/icons for github, linkedin, and resume
-const Landing: React.SFC<LandingProps> = ({ title, subTitle }) => (
+const Landing: React.FunctionComponent<LandingProps> = ({
+  title,
+  subTitle,
+}) => (
   <Header>
     <Title>{title}</Title>
     <SubTitle>{subTitle}</SubTitle>

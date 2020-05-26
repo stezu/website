@@ -10,7 +10,10 @@ interface LayoutProps {
   location: Location;
 }
 
-const Layout: React.SFC<LayoutProps> = ({ children, location }) => (
+const Layout: React.FunctionComponent<LayoutProps> = ({
+  children,
+  location,
+}) => (
   <GlobalStyles>
     <Helmet>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
