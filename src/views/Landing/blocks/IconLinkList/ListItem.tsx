@@ -4,6 +4,8 @@ import styled from '@emotion/styled';
 
 import { color, spacer } from '@/styles';
 
+const ICON_PADDING = spacer('xSmall');
+
 export interface ListItemProps
   extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
@@ -13,19 +15,26 @@ export interface ListItemProps
 }
 
 const LinkListItem = styled.li`
-  margin: 0 ${spacer('medium')};
+  margin: 0 ${spacer('small')};
 `;
 
 const LinkListLink = styled.a`
   color: ${color('gunmetal')};
   display: block;
-  padding: ${spacer('tiny')};
+  outline: none;
+  padding: ${ICON_PADDING};
+  transition: color 250ms;
+
+  &:hover,
+  &:focus {
+    color: ${color('salmon')};
+  }
 
   svg {
     display: block;
     fill: currentColor;
-    height: 1em;
-    width: 1em;
+    height: calc(1em - ${ICON_PADDING});
+    width: calc(1em - ${ICON_PADDING});
   }
 `;
 
