@@ -19,7 +19,7 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="theme-color" content={color('gunmetal')} />
       <link
-        href="https://fonts.googleapis.com/css?family=Roboto:400,900"
+        href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap"
         rel="stylesheet"
       />
       <title>

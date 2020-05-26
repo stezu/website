@@ -3,6 +3,12 @@ module.exports = {
     'gatsby-plugin-emotion',
     'gatsby-plugin-react-helmet',
     {
+      resolve: 'gatsby-plugin-html-attributes',
+      options: {
+        lang: 'en',
+      },
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
