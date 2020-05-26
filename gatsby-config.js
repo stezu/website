@@ -9,7 +9,7 @@ module.exports = {
         short_name: 'Stephen Zuniga',
         start_url: '/',
         background_color: '#26323C',
-        theme_color: '#D1614D',
+        theme_color: '#F98B68',
         display: 'standalone',
         icon: 'src/assets/z-block.svg',
       },
