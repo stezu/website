@@ -77,7 +77,7 @@ const Landing: React.FunctionComponent<LandingProps> = ({
             <GithubMark />
           </IconLinkList.ListItem>
           <IconLinkList.ListItem
-            href="https://www.linkedin.com/in/stephen-zuniga-535b8b69/"
+            href="https://www.linkedin.com/in/stezu/"
             label="My LinkedIn Profile"
             target="_blank"
           >
