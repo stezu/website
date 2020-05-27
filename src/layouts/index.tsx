@@ -3,7 +3,6 @@ import { Helmet } from 'react-helmet';
 
 import { SITE_SUBTITLE, SITE_TITLE } from '@/constants';
 import { GlobalStyles, Transition } from '@/components';
-import { color } from '@/styles';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -17,7 +16,10 @@ const Layout: React.FunctionComponent<LayoutProps> = ({
   <GlobalStyles>
     <Helmet>
       <meta name="viewport" content="width=device-width, initial-scale=1" />
-      <meta name="theme-color" content={color('gunmetal')} />
+      <meta
+        name="description"
+        content="Experienced Senior Software Engineer with a demonstrated history in the computer software industry. Proficient in JavaScript, TypeScript, RESTful API design, and Web Architecture/Infrastructure."
+      />
       <link
         href="https://fonts.googleapis.com/css?family=Roboto:400,900&display=swap"
         rel="stylesheet"
