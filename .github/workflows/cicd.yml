@@ -1,0 +1,51 @@
+name: CI/CD
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+
+      # In order to make gatsby incremental builds work, the .cache and public
+      # folders must be cached between builds.
+      - name: Gatsby Cache Folder
+        uses: actions/cache@v1
+        id: gatsby-cache-folder
+        with:
+          path: |
+            .cache/
+            public/
+          key: ${{ runner.os }}-${{ hashFiles('**/package-lock.json') }}-gatsby
+
+      - name: Install
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      # - name: Unit
+      #   run: npm run test -- --color
+      #   env:
+      #     CI: true
+
+      - name: Build
+        run: npm run build -- --log-pages
+        env:
+          # Enable incremental builds
+          # https://www.gatsbyjs.org/docs/page-build-optimizations-for-incremental-data-changes/
+          GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES: true
+          NODE_ENV: production
+
+      - name: Deploy 🚀
+        if: github.ref == 'refs/heads/master'
+        uses: JamesIves/github-pages-deploy-action@releases/v3
+        with:
+          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: public

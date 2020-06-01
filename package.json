@@ -18,7 +18,7 @@
     "ci": "npm run clean && npm run build",
     "clean": "rm -rf public",
     "lint": "eslint ./src",
-    "lint:fix": "eslint ./src --fix",
+    "lint:fix": "npm run lint -- --fix",
     "start": "gatsby develop",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
