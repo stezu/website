@@ -43,7 +43,7 @@ jobs:
           NODE_ENV: production
 
       - name: Percy
-        uses: percy/snapshot-action@v0.1.0
+        uses: percy/snapshot-action@v0.1.2
         with:
           build-directory: "public/"
         env:
