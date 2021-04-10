@@ -10,7 +10,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
-          node-version: 12
+          node-version: 14
 
       # In order to make gatsby incremental builds work, the .cache and public
       # folders must be cached between builds.

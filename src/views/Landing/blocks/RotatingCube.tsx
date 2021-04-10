@@ -4,7 +4,7 @@ import styled from '@emotion/styled';
 type Direction = 'up';
 
 interface RotatingCubeProps {
-  className?: string;
+  className?: string
   direction?: Direction;
 }
 

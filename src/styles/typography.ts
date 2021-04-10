@@ -17,7 +17,7 @@
  * https://medium.com/@ethersystem/typography-in-design-systems-d61bf5d8a333
  */
 
-import { CSSObject } from '@emotion/core';
+import { CSSObject } from '@emotion/react';
 import { modularScale } from 'polished';
 
 import cssLock from './cssLock';
