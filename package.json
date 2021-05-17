@@ -52,7 +52,7 @@
     "gatsby": "^3.3.1",
     "gatsby-plugin-emotion": "^6.3.0",
     "gatsby-plugin-html-attributes": "^1.0.5",
-    "gatsby-plugin-layout": "^2.3.0",
+    "gatsby-plugin-layout": "^2.5.0",
     "gatsby-plugin-manifest": "^3.3.0",
     "gatsby-plugin-mdx": "^2.3.0",
     "gatsby-plugin-module-resolver": "^1.0.3",
