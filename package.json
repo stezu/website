@@ -23,7 +23,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.14.6",
+    "@babel/runtime": "^7.18.9",
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
     "@mdx-js/mdx": "^1.6.22",
